@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Application</title>
+  <style>
+    /* Add your CSS styling here */
+    /* Add your CSS styling here */
+   /* Style for your own messages */
+.own-message {
+  background-color: #dff0d8; /* Green background color for your own messages */
+  padding: 5px;
+  margin: 5px 0;
+}
+
+/* Style for other users' messages */
+.other-message {
+  background-color: #f0f0f0; /* Light gray background color for other users' messages */
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.chat {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.messages {
+  max-height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.messages div {
+  margin-bottom: 10px;
+}
+
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.input-area button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Chat Container -->
+  <div class="chat">
+    <div class="messages"></div> <!-- Area to display messages -->
+    <div class="input-area">
+      <!-- Input for entering username -->
+      <input type="text" id="usernameInput" placeholder="Enter your username">
+      <!-- Input for typing messages -->
+      <input type="text" id="messageInput" placeholder="Type your message...">
+      <button id="sendButton">Send</button> <!-- Button to send messages -->
+    </div>
+  </div>
+
+  <!-- Include the Socket.IO library -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Include your client-side JavaScript file -->
+  <script src="client.js"></script> <!-- Create this file next -->
+</body>
+</html>
